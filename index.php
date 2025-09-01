@@ -1,19 +1,16 @@
-<?php 
+<?php
+require_once 'autoload.php';
 
+print "<p>Running index.php...</p>";
 
-class HelloWorld {
-    public function greet(){
-        return "<h1>Hello, World!</h1>";
-    }
+$hello = new hello();
+$form = new forms();
+$layout = new layout();
 
-    public function today(){
-        return "<p>Today is " . date("l, F j, Y") . "</p>";
-    }
+print $hello->greet();
+print $hello->today();
+print $form->signUp();
+print $layout->header($conf);
+print $layout->footer($conf);
 
-
-}
-
-
-print (new HelloWorld)->greet();
-print (new HelloWorld)->today();
 ?>
