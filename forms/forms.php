@@ -16,7 +16,16 @@ class forms{
             <input type='submit' value='Sign Up'>
             <a href='signin.php'>Already have an account? Sign in.</a>
         </form>
+
+        
 <?php
+
+    if (isset($_POST['send_mail'])) {
+        // Call the mail sending function here
+        $mail->sendMail('recipient@example.com', 'Subject', 'Body');
+    }
+
+
     }
 public function signIn(){
     ?>
@@ -27,18 +36,18 @@ public function signIn(){
             <label for='password'>Password:</label>
             <input type='password' id='password' name='password'>
             <br>
-            <a href=''>Forgot Password?</a>
+            <a href='forgotemail.php'>Forgot Password?</a>
             <br>
             <input type='submit' value='Sign In'>
             <a href=''>Dont have an account? Sign up.</a>
         </form>
     <?php
-    
+
 }
 
-public function emailform(){
+public function forgotemail(){
     ?>
-        <form method='POST' action=''>
+        <form method='POST' action='forgotemail.php'>
             <label for='email'>Email:</label>
             <input type='email' id='email' name='email'>
             <input type='submit' value='Submit'>
