@@ -21,7 +21,6 @@ $layout = new layout();
 print $layout->header($conf);
 print $form->signIn();
 if(!isset($_POST['password'])) {
-    // Call the login function here
     $form->forgotemail();
 }
 print $layout->footer($conf);
