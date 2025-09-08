@@ -54,6 +54,15 @@ public function forgotemail(){
         </form>
     <?php
 }
+
+
+private submit_button($value, $name){
+    ?>
+    <button type="submit" name="<?php echo $name; ?>"></button>
+    <?php
 }
+
+}
+
 
     

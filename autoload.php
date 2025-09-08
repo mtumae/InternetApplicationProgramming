@@ -1,6 +1,7 @@
 <?php
+require 'Plugins/PHPMailer/vendor/autoload.php';
 require_once 'conf.php';
-$dirs = ['layout', 'forms', 'hello'];
+$dirs = ['layout', 'forms', 'hello', 'Global'];
 
 
 spl_autoload_register(function ($class) use ($dirs) {
@@ -13,6 +14,9 @@ spl_autoload_register(function ($class) use ($dirs) {
         }
     }
 });
+
+$objsendmail = new SendMail();
+
 
 
 // $hello = new hello();

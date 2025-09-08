@@ -14,3 +14,13 @@ $conf['db_name'] = 'my_database';
 
 //Language
 $conf['lang'] = 'en';
+
+
+
+//mail
+$conf['mail_host'] = 'smtp.gmail.com';
+$conf['mail_username'] = 'mtume2016@gmail.com';
+$conf['mail_password'] = 'dvvayrkawbggrzlb';
+$conf['mail_type']= 'smtp';   
+$conf['port']=465;  
+$conf['mail_secure'] = 'ssl';
