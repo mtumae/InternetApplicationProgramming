@@ -1,32 +1,32 @@
 <?php
+require_once '../plugins/PHPMailer/mail.php';
+
 
 class forms{
-    public function signUp(){
+    public function createAccount($conf){
 ?>
         <form method='POST' action=''>
+            <label for='name'>Name:</label>
+            <input type='text' id='name' name='name'>
+            <br>
+            <br>
             <label for='email'>Email:</label>
             <input type='email' id='email' name='email'>
+            <br><br>
+            <input type='submit' name="create_account" >
             <br>
-            <label for='password'>Password:</label>
-            <input type='password' id='password' name='password'>
-            <br>
-            <label for='passwordconf'>Password Confirmation:</label>
-            <input type='passwordconf' id='passwordconf' name='passwordconf'>
-            <br>
-            <input type='submit' value='Sign Up'>
-            <a href='signin.php'>Already have an account? Sign in.</a>
+          
         </form>
-
-        
 <?php
-
-    if (isset($_POST['send_mail'])) {
-        // Call the mail sending function here
-        $mail->sendMail('recipient@example.com', 'Subject', 'Body');
+    if (isset($_POST['create_account'])) {
+        $mail = new Mail();
+        echo "Creating account for " . $_POST['name'] . " with email " . $_POST['email'];
+        $mail->verifyEmail($conf, $_POST['email'], $_POST['name']);
+    }
     }
 
 
-    }
+
 public function signIn(){
     ?>
         <form method='POST' action=''>
@@ -44,6 +44,10 @@ public function signIn(){
     <?php
 
 }
+
+
+
+
 
 public function forgotemail(){
     ?>

@@ -1,7 +1,7 @@
 <?php
 
 //Site Configuration
-$conf['site_name'] = 'My Website';
+$conf['site_name'] = 'ICS 2.2';
 $conf['site_url'] = 'http://localhost';
 $conf['email'] = 'info@icscommunity.com';
 
