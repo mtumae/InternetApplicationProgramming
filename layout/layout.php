@@ -31,13 +31,17 @@ class layout{
 
 //navbar
 
+ public function navbar($conf){
+    ?>
+    <h1><?php echo $conf['site_name']; ?></h1>
+<?php
+ }
+
 
 
  public function content($conf){
     ?>
-
-
-
+<?php
  }
 
 
