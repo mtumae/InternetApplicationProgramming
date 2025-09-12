@@ -1,5 +1,6 @@
 <?php
 require_once '../plugins/PHPMailer/mail.php';
+require_once '../api/db.php';
 
 
 class forms{
@@ -20,6 +21,7 @@ class forms{
 <?php
     if (isset($_POST['create_account'])) {
         $mail = new Mail();
+        $api = new db();
         echo "Creating account for " . $_POST['name'] . " with email " . $_POST['email'];
         $mail->verifyEmail($conf, $_POST['email'], $_POST['name']);
     }
