@@ -1,15 +1,10 @@
 <?php
 
+require_once '../conf.php';
 
 class db{
-    public function getAll(){
-        $localhost = 'localhost';
-        $username= 'root';
-        $password= 'mtume';
-        $database= 'taskapp';
-
-
-        $conn = new mysqli($localhost, $username, $password, $database);
+    public function getAll($conf){
+        $conn = new mysqli($conf['localhost'], $conf['username'], $conf['password'], $conf['database']);
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }

@@ -8,6 +8,6 @@ require_once '../api/db.php';
 
 $api = new db();
 
-$api->getAll();
+$api->getAll($conf);
 
 ?>
