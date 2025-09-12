@@ -6,11 +6,12 @@ $conf['site_url'] = 'http://localhost';
 $conf['email'] = 'info@icscommunity.com';
 
 //Database Configuration
-$conf['db_type'] = 'mysql';//pdo
+//$conf['db_type'] = 'mysql';//pdo
+
 $conf['db_host'] = 'localhost';
 $conf['db_user'] = 'root';
 $conf['db_pass'] = 'mtume';
-$conf['db_name'] = 'my_database';
+$conf['db_name'] = 'mysql';
 
 //Language
 $conf['lang'] = 'en';
@@ -44,11 +45,3 @@ $conf['db_name'] = '';
 $conf['lang'] = '';
 
 
-
-//mail
-$conf['mail_host'] = '';
-$conf['mail_username'] = '';
-$conf['mail_password'] = '';
-$conf['mail_type']= '';   
-$conf['port']=;  
-$conf['mail_secure'] = '';
